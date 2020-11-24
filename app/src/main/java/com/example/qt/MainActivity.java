@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     /*
     * 点击事件*/
+    /*halo*/
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -75,5 +76,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
 
         }
-    }
+    }/*ll*/
 }
