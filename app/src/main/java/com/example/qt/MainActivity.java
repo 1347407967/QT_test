@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
         setListener();
         setInitStatus();
@@ -119,16 +121,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.rl_main:
                 cleaBottomImageState();
-                selectDisplayview(1);
+                selectDisplayview(0);
                 break;
             case R.id.rl_sq:
                 cleaBottomImageState();
+                selectDisplayview(1);
                 break;
             case R.id.rl_xx:
                 cleaBottomImageState();
+                selectDisplayview(2);
                 break;
             case R.id.rl_my:
                 cleaBottomImageState();
+                selectDisplayview(3);
                 break;
                 default:
                     break;
